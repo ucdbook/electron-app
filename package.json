@@ -1,6 +1,6 @@
 {
   "name": "electron-app",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "electron app",
   "main": "main.js",
   "scripts": {
@@ -18,8 +18,9 @@
     "tutorial",
     "demo"
   ],
-  "author": "GitHub",
+  "author": "ucdbook",
   "license": "MIT",
+  "email": "tian.yr198335@gmail.com",
   "devDependencies": {
     "electron": "^3.0.4",
     "electron-builder": "^20.28.3",
