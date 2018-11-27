@@ -56,6 +56,7 @@ deploy:
   on:
     repo: ucdbook/electron-app
     tags: true
+  draft: true
 branches:
   only:
     - /^v\d+(\.\d+)+$/
