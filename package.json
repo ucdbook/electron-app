@@ -19,13 +19,47 @@
     "demo"
   ],
   "author": "GitHub",
-  "license": "CC0-1.0",
+  "license": "MIT",
   "devDependencies": {
     "electron": "^3.0.4",
     "electron-builder": "^20.28.3",
     "electron-context-menu": "^0.10.0",
     "electron-log": "^2.2.17",
-    "electron-rebuild": "^1.8.2",
     "electron-updater": "^3.1.2"
+  },
+  "build": {
+    "productName": "electron-app",
+    "appId": "com.ucdbook.electron-app",
+    "directories": {
+      "buildResources": "resources",
+      "output": "release"
+    },
+    "files": [
+      "dist",
+      "package.json",
+      "vendor/${os}",
+      "main.js"
+    ],
+    "asar": true,
+    "asarUnpack": [
+      "node_modules/**"
+    ],
+    "mac": {
+      "category": "public.app-category.developer-tools",
+      "publish": "github"
+    },
+    "win": {
+      "target": "nsis",
+      "publish": "github"
+    },
+    "linux": {
+      "category": "Development",
+      "target": [
+        "deb",
+        "AppImage"
+      ],
+      "executableName": "electron-app",
+      "publish": "github"
+    }
   }
 }
